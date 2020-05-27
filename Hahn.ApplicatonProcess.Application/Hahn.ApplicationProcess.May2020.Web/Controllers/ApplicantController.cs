@@ -19,7 +19,7 @@ namespace Hahn.ApplicationProcess.May2020.Web.Controllers
         {
             _applicantService = applicantService;
         }
-       
+
         /// <summary>
         /// Applicant Post
         /// </summary>
@@ -32,6 +32,84 @@ namespace Hahn.ApplicationProcess.May2020.Web.Controllers
             {
                 if (!ModelState.IsValid) return BadRequest(ModelState);
                 return Ok(await _applicantService.AddApplicant(dto));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Get Applicant By ApplicantId
+        /// </summary>
+        /// <param name="applicantId"></param>
+        /// <returns></returns>
+        [HttpGet("applicantId/{applicantId}")]
+        public async Task<IActionResult> GetById([FromRoute] int applicantId)
+        {
+            try
+            {
+                return Ok(await _applicantService.GetById(applicantId));
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Customer
+        /// Get ALL CUSTOMERS
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("all")]
+        public async Task<IActionResult> Get()
+        {
+            try
+            {
+                return Ok(await _applicantService.GetAll());
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Delete Applicant
+        /// </summary>
+        /// <param name="applicantId"></param>
+        /// <returns></returns>
+        [HttpDelete]
+        public async Task<IActionResult> Delete([FromBody] ApplicantDto dto)
+        {
+            try
+            {
+                return Ok(await _applicantService.DeleteApplicant(dto));
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// To Update Applicant
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody] ApplicantDto dto)
+        {
+            try
+            {
+                if (!ModelState.IsValid) return BadRequest(ModelState);
+                return Ok(await _applicantService.UpdateApplicant(dto));
             }
             catch (Exception e)
             {

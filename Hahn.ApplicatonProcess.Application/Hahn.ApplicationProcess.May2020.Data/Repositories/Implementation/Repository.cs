@@ -19,36 +19,32 @@ namespace Hahn.ApplicationProcess.May2020.Data.Repositories.Implementation
             this.context = context;
             entities = context.Set<T>();
         }
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            return entities.AsEnumerable();
+            return await entities.ToListAsync();
         }
-        public T GetById(int id)
+        public async Task<T> GetById(int id)
         {
-            return entities.SingleOrDefault(s => s.Id == id);
+            return await entities.SingleOrDefaultAsync(s => s.Id == id);
         }
-        
+
         public async Task<T> Insert(T entity)
         {
             await context.Set<T>().AddAsync(entity);
             await context.SaveChangesAsync();
-
             return entity;
         }
-        
 
         public async Task Update(T entity)
         {
             context.Entry(entity).State = EntityState.Modified;
             await context.SaveChangesAsync();
         }
-        public void Delete(int id)
-        {
-            if (id == null) throw new ArgumentNullException("entity");
 
-            T entity = entities.SingleOrDefault(s => s.Id == id);
-            entities.Remove(entity);
-            //context.SaveChanges();
+        public async Task Delete(T entity)
+        {
+            context.Set<T>().Remove(entity);
+            await context.SaveChangesAsync();
         }
 
         // public Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate)
