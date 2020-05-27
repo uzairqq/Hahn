@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicationProcess.May2020.Web", "Hahn.ApplicationProcess.May2020.Web\Hahn.ApplicationProcess.May2020.Web.csproj", "{032D4A47-BEDA-4847-8F96-B6BA01FBDDF5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicationProcess.May2020.Web", "Hahn.ApplicationProcess.May2020.Web\Hahn.ApplicationProcess.May2020.Web.csproj", "{032D4A47-BEDA-4847-8F96-B6BA01FBDDF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicationProcess.May2020.Data", "Hahn.ApplicationProcess.May2020.Data\Hahn.ApplicationProcess.May2020.Data.csproj", "{E164E595-F425-445F-AD08-66FCE350B1CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicationProcess.May2020.Data", "Hahn.ApplicationProcess.May2020.Data\Hahn.ApplicationProcess.May2020.Data.csproj", "{E164E595-F425-445F-AD08-66FCE350B1CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicationProcess.May2020.Domain", "Hahn.ApplicationProcess.May2020.Domain\Hahn.ApplicationProcess.May2020.Domain.csproj", "{D11F930E-1483-49DA-89F4-63627A8DE78D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hahn.ApplicationProcess.May2020.Domain", "Hahn.ApplicationProcess.May2020.Domain\Hahn.ApplicationProcess.May2020.Domain.csproj", "{D11F930E-1483-49DA-89F4-63627A8DE78D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hahn.ApplicationProcess.May2020.Core", "Hahn.ApplicationProcess.May2020.Core\Hahn.ApplicationProcess.May2020.Core.csproj", "{901380FA-1E82-4EA2-98C4-ABC9A0759FF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D11F930E-1483-49DA-89F4-63627A8DE78D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D11F930E-1483-49DA-89F4-63627A8DE78D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D11F930E-1483-49DA-89F4-63627A8DE78D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{901380FA-1E82-4EA2-98C4-ABC9A0759FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{901380FA-1E82-4EA2-98C4-ABC9A0759FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{901380FA-1E82-4EA2-98C4-ABC9A0759FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{901380FA-1E82-4EA2-98C4-ABC9A0759FF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
