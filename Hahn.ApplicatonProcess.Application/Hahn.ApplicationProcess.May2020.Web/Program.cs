@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Hahn.ApplicatonProcess.Application
+namespace Hahn.ApplicationProcess.May2020.Web
 {
     public class Program
     {

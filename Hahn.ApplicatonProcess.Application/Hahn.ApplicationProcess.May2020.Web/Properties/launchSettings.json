@@ -4,8 +4,8 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:58509",
-      "sslPort": 44307
+      "applicationUrl": "http://localhost:50693",
+      "sslPort": 44337
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Hahn.ApplicatonProcess.Application": {
+    "Hahn.ApplicationProcess.May2020.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
