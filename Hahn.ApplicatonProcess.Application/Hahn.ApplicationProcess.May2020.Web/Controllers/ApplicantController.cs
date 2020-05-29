@@ -20,12 +20,27 @@ namespace Hahn.ApplicationProcess.May2020.Web.Controllers
             _applicantService = applicantService;
         }
 
-        /// <summary>
-        /// Applicant Post
-        /// </summary>
-        /// <param name="dto"></param>
-        /// <returns></returns>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     {
+        ///        "name": "Uzair",
+        ///        "familyName": "ABC",
+        ///         "address": "XYZ",
+        ///         "countryOfOrigin": "US",
+        ///         "emailAddress": "xyz.qq@outlook.com",
+        ///         "age": 25,
+        ///         "hired": false,
+        ///         "id": 0,
+        ///     }
+        /// </remarks>
+        /// <param name="item"></param>
+        /// <returns>A newly created Applicant</returns>
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>            
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Post([FromBody] ApplicantDto dto)
         {
             try
@@ -61,7 +76,7 @@ namespace Hahn.ApplicationProcess.May2020.Web.Controllers
 
         /// <summary>
         /// Customer
-        /// Get ALL CUSTOMERS
+        /// Get ALL Applicant
         /// </summary>
         /// <returns></returns>
         [HttpGet("all")]

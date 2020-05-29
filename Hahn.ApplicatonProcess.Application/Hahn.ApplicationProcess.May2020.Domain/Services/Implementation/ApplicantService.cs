@@ -21,10 +21,15 @@ namespace Hahn.ApplicationProcess.May2020.Domain.Services.Implementation
         {
             try
             {
-
                 var customer = await _applicantRepository.Insert(new Applicant()
                 {
-                    Name = dto.Name
+                    Name = dto.Name,
+                    FamilyName = dto.FamilyName,
+                    Address = dto.Address,
+                    CountryOfOrigin = dto.CountryOfOrigin,
+                    EmailAddress = dto.EmailAddress,
+                    Age = dto.Age,
+                    Hired = dto.Hired,
                 });
                 return new ResponseMessagesDto()
                 {
@@ -57,7 +62,13 @@ namespace Hahn.ApplicationProcess.May2020.Domain.Services.Implementation
                 var applicantDto = new ApplicantDto()
                 {
                     Id = applicant.Id,
-                    Name = applicant.Name
+                    Name = applicant.Name,
+                    FamilyName = applicant.FamilyName,
+                    Address = applicant.Address,
+                    CountryOfOrigin = applicant.CountryOfOrigin,
+                    EmailAddress = applicant.EmailAddress,
+                    Age = applicant.Age,
+                    Hired = applicant.Hired,
                 };
                 return applicantDto;
             }
@@ -76,7 +87,13 @@ namespace Hahn.ApplicationProcess.May2020.Domain.Services.Implementation
                 return applicants.Select(i => new ApplicantDto()
                 {
                     Id = i.Id,
-                    Name = i.Name
+                    Name = i.Name,
+                    FamilyName = i.FamilyName,
+                    Address = i.Address,
+                    CountryOfOrigin = i.CountryOfOrigin,
+                    EmailAddress = i.EmailAddress,
+                    Age = i.Age,
+                    Hired = i.Hired,
                 }).ToList();
             }
             catch (Exception e)
@@ -121,12 +138,16 @@ namespace Hahn.ApplicationProcess.May2020.Domain.Services.Implementation
         {
             try
             {
-
                 await _applicantRepository.Update(new Applicant()
                 {
                     Id = dto.Id,
                     Name = dto.Name,
-                    CreatedAt = DateTime.Now
+                    FamilyName = dto.FamilyName,
+                    Address = dto.Address,
+                    CountryOfOrigin = dto.CountryOfOrigin,
+                    EmailAddress = dto.EmailAddress,
+                    Age = dto.Age,
+                    Hired = dto.Hired,
                 });
                 return new ResponseMessagesDto()
                 {
@@ -149,8 +170,6 @@ namespace Hahn.ApplicationProcess.May2020.Domain.Services.Implementation
                 };
             }
         }
-
-
     }
 }
 

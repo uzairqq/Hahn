@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Hahn.ApplicationProcess.May2020.Core.Dto;
+using Hahn.ApplicationProcess.May2020.Core.Models;
 
 namespace Hahn.ApplicationProcess.May2020.Domain.Services.Interfaces
 {

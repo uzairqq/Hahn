@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hahn.ApplicationProcess.May2020.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Hahn.ApplicationProcess.May2020.Web.Controllers.ApplicantController.Post(Hahn.ApplicationProcess.May2020.Core.Dto.ApplicantDto)">
+             <remarks>
+             Sample request:
+            
+                 {
+                    "name": "Uzair",
+                    "familyName": "ABC",
+                     "address": "XYZ",
+                     "countryOfOrigin": "US",
+                     "emailAddress": "xyz.qq@outlook.com",
+                     "age": 25,
+                     "hired": false,
+                     "id": 0,
+                 }
+             </remarks>
+             <param name="item"></param>
+             <returns>A newly created Applicant</returns>
+             <response code="201">Returns the newly created item</response>
+             <response code="400">If the item is null</response>            
+        </member>
+        <member name="M:Hahn.ApplicationProcess.May2020.Web.Controllers.ApplicantController.GetById(System.Int32)">
+            <summary>
+            Get Applicant By ApplicantId
+            </summary>
+            <param name="applicantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hahn.ApplicationProcess.May2020.Web.Controllers.ApplicantController.Get">
+            <summary>
+            Customer
+            Get ALL Applicant
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Hahn.ApplicationProcess.May2020.Web.Controllers.ApplicantController.Delete(Hahn.ApplicationProcess.May2020.Core.Dto.ApplicantDto)">
+            <summary>
+            Delete Applicant
+            </summary>
+            <param name="applicantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Hahn.ApplicationProcess.May2020.Web.Controllers.ApplicantController.Put(Hahn.ApplicationProcess.May2020.Core.Dto.ApplicantDto)">
+            <summary>
+            To Update Applicant
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
